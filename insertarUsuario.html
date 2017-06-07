@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crear Usuario</title>
+</head>
+<body>
+<h2>Crear Usuario</h2>
+
+	<form action="modelo/create.php" method="post">
+	<label for="nombre">Nombre:</label>
+	<input type="text" name="nombre" id="nombre" required placeholder="Ingrese el nombre">
+	<label for="apellido">Apellido:</label>
+	<input type="text" name="apellido" id="apellido" required placeholder="Ingrese el apellido">
+	<label for="telefono">Telefono</label>
+	<input type="text" name="telefono" id="telefono" required placeholder="Ingrese el telefono">
+	<label for="estado">Estados:</label>
+	<select name="estado" id="estado" required placeholder=>
+		<option>Amazonas</option>
+		<option>Anzoategui</option>
+		<option>Apure</option>
+		<option>Aragua</option>
+		<option>Barinas</option>
+		<option>Bolivar</option>
+		<option>Carabobo</option>
+		<option>Cojedes</option>
+		<option>Delta Amacuro</option>
+		<option>Distrito Capiltal</option>
+		<option>Falcon</option>
+		<option>Guarico</option>
+		<option>Lara</option>
+		<option>Merida</option>
+		<option>Miranda</option>
+		<option>Monagas</option>
+		<option>Nueva Esparta</option>
+		<option>Portuguesa</option>
+		<option>Sucre</option>
+		<option>Tachira</option>
+		<option>Trujillo</option>
+		<option>Vargas</option>
+		<option>Yaracuy</option>
+		<option>Zulia</option>
+	</select>
+	<input type="submit" value="Enviar datos">
+	</form>
+<a href="mostrarUsuarios.php">Volver al listado</a>
+
+
+
+</body>
+</html>

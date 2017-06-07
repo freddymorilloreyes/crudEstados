@@ -1,0 +1,27 @@
+body{
+
+}
+h2{
+	font-size:50px;
+	color: rgb(400,40,450);
+}
+th{
+	font-size: 20px;
+}
+/*selector descendente td a es decir aplica a los elementos a dentro de la columna td*/
+td a {
+	color:brown;
+}
+/*selector de clase*/
+.rojo{
+	color: red;
+}
+
+.aLaDerecha a{
+	position:relative; 
+	top: ;
+	bottom: ;
+	right:;
+	left:80%;
+	color: red;
+}
