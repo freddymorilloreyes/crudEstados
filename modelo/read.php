@@ -1,18 +1,27 @@
 <?php 
 require_once('conexion.php');
 
-if (isset($_GET['id'])) {
-//este es para actualizar un usuario
-$statement=$conexion->prepare("SELECT * FROM infoPersonasEstados WHERE id=:id");
-$statement->bindparam(':id',$_GET['id']);
-$statement->execute();
-$infoPersona=$statement->fetch();
-	
-}else{
-//con este obtengo todos los usuarios
-$statement=$conexion->prepare("SELECT * FROM infoPersonasEstados");
-$statement->execute();
-$arreglo=$statement->fetchAll();
-}
+//esta es para actualizar un usuario
+	function obtenerUsuario($id)
+	{	
+		$conexion=new Conexion();
+		$conexion=$conexion->conectarConBaseDatos();
+		$statement=$conexion->prepare("SELECT * FROM infoPersonasEstados WHERE id=:id ");
+		$statement->bindparam(':id',$id);
+		$statement->execute();
+		$arreglo=$statement->fetch();
+		return $arreglo;
+	}	
+
+//con esta obtengo todos los usuarios
+	function getUsuarios()
+	{
+		$conexion=new Conexion();
+		$conexion=$conexion->conectarConBaseDatos();
+		$statement=$conexion->prepare("SELECT * FROM infoPersonasEstados ORDER BY nombre ASC");
+		$statement->execute();
+		$arreglo=$statement->fetchAll();
+		return $arreglo;
+	}
 
  ?>
